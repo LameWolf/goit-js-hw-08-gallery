@@ -71,6 +71,7 @@ const onOpenModal = evt => {
 // Close Modal
 
 const onCloseModal = () => {
+  window.removeEventListener('keydown', handleSwipe);
   window.removeEventListener('keydown', onEscKeyPress);
   lightboxEl.classList.remove('is-open');
   changeAttribute('', '');
